@@ -95,7 +95,7 @@ main {
 	display: flex;
 }
 
-#about, 
+#about,
 #collections {
 	text-align: center;
 }
@@ -116,12 +116,19 @@ main {
 }
 
 /***********************************/
+/**** Posts div styling ****/
 
-.grape li p {
-	font-size: .75rem;
+#posts li p {
+	font-size: .90em;
 	margin-top: .25rem;
 	margin-bottom: 0rem;
 }
+
+#posts li a {
+	font-size: 1.2em;
+}
+
+/*********************************/
 
 .grape li,
 .sand li {
