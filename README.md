@@ -15,10 +15,10 @@ A minimalistic text based theme for Hugo inspired by [hugo-bingo](https://github
 hugo new site mynewsite
 ```
 
-3: Change to themes dir.
+3: Change to themes directory.
 
 ```
-cd classic/themes
+cd mynewsite/themes
 ```
 
 4: Clone the repo
@@ -27,7 +27,7 @@ cd classic/themes
 git clone git@github.com:shankar/hugo-grapes.git
 ```
 
-5: Copy the `content/`, `static/`, and `config.toml` from the `exampleSite` directory into the classic directory. The existing `content/`, `static/`, and `config.toml` files will be over-written.
+5: Copy the `content/`, `static/`, and `config.toml` from the `exampleSite` directory into the `mynewsite` directory. The existing `content/`, `static/`, and `config.toml` files will be over-written.
 ```
 cp -r hugo-grapes/exampleSite/* /path/to/mynewsite
 ```
@@ -51,7 +51,7 @@ hugo new post/awesome-post.md
 2: Edit the config.toml file and edit the value of the `avatar` key under `params` to let hugo know its location.
 ```
 [params]
-avatar = "path/to/avatar" 
+avatar = "path/to/avatar"
 # Path is relative to static folder.
 # Example: "img/grapes.svg" for grapes.svg file located in static/img folder
 ```
