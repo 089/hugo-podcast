@@ -1,0 +1,127 @@
+{
+  "baseurl": "https://beispiel.insohr.de",
+  "languageCode": "de-de",
+  "title": "Podcast: Beispiel",
+  "theme": "hugo-podcast",
+  "enableEmoji": true,
+  "removePathAccents": true,
+  "permalinks": {
+    "episode": "/episode/:filename/"
+  },
+  "menu": {
+    "main": [
+      {
+        "identifier": "home",
+        "name": "🏠",
+        "url": "/",
+        "weight": 10
+      },
+      {
+        "identifier": "about",
+        "name": "Über",
+        "url": "/about",
+        "weight": 20
+      },
+      {
+        "identifier": "episode",
+        "name": "Episoden",
+        "url": "/episode",
+        "weight": 30
+      },
+      {
+        "identifier": "privacy",
+        "name": "Datenschutz",
+        "url": "/privacy",
+        "weight": 0
+      },
+      {
+        "identifier": "imprint",
+        "name": "Impressum",
+        "url": "/imprint",
+        "weight": 0
+      }
+    ]
+  },
+  "params": {
+    "copyright": {
+      "plain": "Beispiel, CC BY-ND 4.0, Emil Example",
+      "markup": "Beispiel, [CC BY-ND 4.0](/lizenz), [Emil Example](https://www.example.com/)"
+    },
+    "podlove": {
+      "webplayer": {
+        "enabled": true,
+        "show": {
+          "title": "Beispiel",
+          "subtitle": "Untertitel für den Podcast.",
+          "summary": "Zusammenfassung des Podcasts. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.",
+          "poster": "/img/podcastlogo.png",
+          "url": "https://beispiel.de"
+        },
+        "theme": {
+          "main": "#020024",
+          "highlight": "#f4decb"
+        },
+        "runtime": {
+          "language": "de"
+        },
+        "visibleComponents": [
+          "tabInfo",
+          "tabChapters",
+          "tabTranscripts",
+          "tabFiles",
+          "tabAudio",
+          "tabShare",
+          "poster",
+          "showTitle",
+          "episodeTitle",
+          "subtitle",
+          "progressbar",
+          "controlSteppers",
+          "controlChapters"
+        ]
+      },
+      "subscribeButton": {
+        "enabled": true,
+        "language": "de",
+        "size": "medium",
+        "color": "#F4DECB",
+        "format": "cover",
+        "style": "outline",
+        "jsonData": {
+          "title": "Beispiel",
+          "subtitle": "Süß! Mittelscharf! Scharf!",
+          "description": "Die muntere Talk Show zum Mitmachen.",
+          "cover": "/img/podcastlogo.png",
+          "link": "https://beispiel.de",
+          "feeds": [
+            {
+              "type": "audio",
+              "format": "mp3",
+              "url": "/feed/mp3.xml",
+              "variant": "high"
+            },
+            {
+              "type": "audio",
+              "format": "aac",
+              "url": "/feed/mp4.xml",
+              "variant": "high",
+              "directory-url-itunes": "https://itunes.apple.com/de/podcast/newz-of-the-world/id492588543"
+            },
+            {
+              "type": "audio",
+              "format": "ogg",
+              "url": "/feed/ogg.xml",
+              "variant": "high"
+            },
+            {
+              "type": "audio",
+              "format": "opus",
+              "url": "/feed/opus.xml",
+              "variant": "high"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
