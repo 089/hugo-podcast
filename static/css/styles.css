@@ -110,11 +110,6 @@ main {
 	width: 160px;
 }
 
-.avatar > img {
-	border-radius: 50%;
-	width: 100%
-}
-
 /***********************************/
 /**** Posts div styling ****/
 
@@ -182,8 +177,13 @@ a {
 
 .white a {
 	color: #30B200; /*Green*/
+	font-weight: 700;
 }
 
 .white a:hover {
 	color: var(--color);
+}
+
+nav.pagination {
+  text-align: center;
 }
