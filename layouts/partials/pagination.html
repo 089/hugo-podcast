@@ -1,0 +1,24 @@
+<nav class="pagination">
+  {{ if .PrevInSection }}
+  <a href="{{.PrevInSection.Permalink}}">
+    <span aria-hidden="true">&larr;</span>
+    Zurück
+  </a>
+  {{ else }}
+  <a href="#">
+    <span aria-hidden="true">&larr;</span>
+    Zurück
+  </a>
+  {{ end }}
+  {{ if .NextInSection }}
+  <a href="{{.NextInSection.Permalink}}">
+    Weiter
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+  {{ else }}
+  <a href="#">
+      Weiter
+      <span aria-hidden="true">&rarr;</span>
+    </a>  
+  {{ end }}
+</nav>

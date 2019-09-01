@@ -1,0 +1,22 @@
+{{ if and (isset .Params "episode") (isset .Params.episode "number") }}
+{{ $number := .Params.episode.number }}
+<div id='{{ printf "%s%s" "episode_" $number }}'></div>
+<script>
+	podlovePlayer('{{ printf "#%s%s" "episode_" $number }}', {
+		show: {{ .Site.Params.podlove.webplayer.show }},
+		theme: {{ .Site.Params.podlove.webplayer.theme }},
+		runtime: {{ .Site.Params.podlove.webplayer.runtime }},
+		visibleComponents: {{ .Site.Params.podlove.webplayer.visibleComponents }},
+    title: {{ .Params.episode.title }},
+		subtitle: {{ .Params.episode.subtitle }},
+		summary: {{ .Summary }},
+		publicationDate: {{ .Params.episode.publicationDate }},
+		poster: {{ .Params.episode.poster }},
+		duration: {{ .Params.episode.duration }},
+		chapters: {{ .Params.episode.chapters }},
+		audio: {{ .Params.episode.audio }},
+		contributors: {{ .Params.episode.contributors }},
+    tabs: {info: true}
+	});
+</script>
+{{ end }}

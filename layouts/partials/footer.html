@@ -1,6 +1,9 @@
 <footer class="sand">
-    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+  <span class="footer-text">
+    {{- if and (isset .Site.Params "copyright") (isset .Site.Params.copyright "markup") -}}
+    {{ .Site.Params.copyright.markup | markdownify}}
+    ·
+    {{- end -}}
+    Powered by <a href="https://gohugo.io/" target="_blank" ref="noopener noreferrer">Hugo</a>
+  </span>
 </footer>
-<link rel="stylesheet" href="{{ "css/solarized-light.css" | absURL }}"/>
-<script src="{{ "js/highlight.pack.js" | absURL }}"></script>
-<script>hljs.initHighlightingOnLoad();</script>

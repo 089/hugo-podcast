@@ -1,0 +1,20 @@
+<script>
+    window.podcastData = {{ .Site.Params.podlove.subscribeButton.jsonData }}
+</script>
+<script      
+	class="podlove-subscribe-button" 
+	src="js/podlove-subscribe-button/javascripts/app.js" 
+	data-json-data="podcastData"
+	data-language="{{ .Site.Params.podlove.subscribeButton.language }}" 
+	data-size="{{ .Site.Params.podlove.subscribeButton.size }}" 
+	data-color="{{ .Site.Params.podlove.subscribeButton.color }}" 
+	data-format="{{ .Site.Params.podlove.subscribeButton.format }}" 
+	data-style="{{ .Site.Params.podlove.subscribeButton.style }}">
+</script>
+<noscript>Subscribe to feed:
+<ul>
+  {{ range .Site.Params.podlove.subscribeButton.jsonData.feeds }}
+  <li><a href="{{ .url | absURL }}">{{ .format }}</a></li>
+  {{ end }}
+</ul>
+</noscript>
