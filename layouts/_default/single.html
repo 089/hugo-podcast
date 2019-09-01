@@ -1,15 +1,35 @@
 {{ define "main" }}
 <main id="single">
-    <div id="post" class="white">
-	<div class="container">
-	    <div id="title">
-                <h1>{{ .Title }}</h1>
-                {{ .Render "time-element" }}
-	    </div>
-            <section class="post-content">
-                {{ .Content }}
-            </section>
-	</div>
+  <div id="post" class="white">
+    <div class="container">
+      <div id="title">
+        <h1>{{ .Title }}</h1>
+        {{ .Render "time-element" }}
+      </div>
+      <section class="post-content">
+        {{- if isset .Params "episode" -}}
+        {{ if eq $.Site.Params.podlove.webplayer.enabled true }}
+        {{ partial "podlove-web-player.html" . }}
+        {{ end }}
+        {{- end -}}
+
+        {{ .Content }}
+
+        {{- if isset .Params "episode" -}}
+        {{ if eq $.Site.Params.podlove.webplayer.enabled false }}
+        <h2>Download:</h2>
+        <ul>
+          {{ range .Params.episode.audio }}
+          <li><a href="{{ .url | absURL }}">{{ .title }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{- end -}}
+      </section>
     </div>
+  </div>
+  <div class="container white">
+    {{ partial "pagination.html" . }}
+  </div>
 </main>
 {{ end }}
